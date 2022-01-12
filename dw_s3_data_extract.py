@@ -17,7 +17,7 @@ def lambda_handler(event, context):
         response = s3.get_object(Bucket=bucket, Key=key)
         print("CONTENT TYPE: " + response['ContentType'])
         print(key)
-        conn_string = "dbname='bigdatapocdb' port='5439' user='root' password='Test12345' host='bigdatapoc.cynwb8odrsdt.cn-north-1.redshift.amazonaws.com.cn'"
+        conn_string = "dbname='bigdatapocdb' port='5439' user='xxxx' password='xxxxxx' host='xxxxxx.cynwb8odrsdt.cn-north-1.redshift.amazonaws.com.cn'"
         conn = psycopg2.connect(conn_string)
         cursor = conn.cursor()
         cursor.execute("copy t_electricitymeterdegree(name,description,realtimekwh,meterdisplayname,workcentername) from '"+"s3://dwpocbucket/"+key+"' iam_role 'arn:aws-cn:iam::675378736534:role/MyRedshiftRole' format as json 's3://dwpocbucket/testJSONDianbiao_patch.json';")
