@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     'Content-Type': 'application/json'
     }
     try: 
-        conn_string = "dbname='bigdatapocdb' port='5439' user='root' password='Test12345' host='bigdatapoc.cynwb8odrsdt.cn-north-1.redshift.amazonaws.com.cn'"
+        conn_string = "dbname='bigdatapocdb' port='5439' user='xxxxx' password='xxxxxxx' host='xxxxxxxx.cynwb8odrsdt.cn-north-1.redshift.amazonaws.com.cn'"
         batchtime=datetime.now()
         conn = psycopg2.connect(conn_string)
         cursor = conn.cursor()
