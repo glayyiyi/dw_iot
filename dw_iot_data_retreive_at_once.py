@@ -7,8 +7,8 @@ from datetime import *
 
 def lambda_handler(event, context):
     # TODO implement
-    api_url = 'http://10.52.15.80/Thingworx/Things/CIMC.RestFulForCIMC.Helper/Services/GetAllMeterKWHRealTime'
-    appKey = 'c9effe6e-fa55-46b2-b63e-635d25fab733'
+    api_url = 'http://10.52.xx.xx/Thingworx/Things/CIMC.RestFulForCIMC.Helper/Services/GetAllMeterKWHRealTime'
+    appKey = 'c9effe6e-fa55-46b2-b63e-xxxxxxxx'
     headers = {
     'appKey': appKey,
     'Accept': 'application/json',
